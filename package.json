@@ -1,0 +1,45 @@
+{
+    "name": "haraka-plugin-surrealdb",
+    "version": "1.0.0",
+    "description": "SurrealDB plugin for Haraka",
+    "main": "index.js",
+    "type": "commonjs",
+    "files": [
+        "config"
+    ],
+    "scripts": {
+        "format": "npm run prettier:fix && npm run lint:fix",
+        "lint": "oxlint .",
+        "lint:fix": "oxlint . --fix",
+        "prettier": "prettier ./*.{js,json} --check",
+        "prettier:fix": "prettier ./*.{js,json} --write",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cavazzo/haraka-plugin-surrealdb.git"
+    },
+    "keywords": [
+        "haraka",
+        "haraka-plugin",
+        "mail",
+        "smtp",
+        "surrealdb"
+    ],
+    "author": "Jesus Cavazos <jesus@cavazzo.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cavazzo/haraka-plugin-surrealdb/issues"
+    },
+    "homepage": "https://github.com/cavazzo/haraka-plugin-surrealdb#readme",
+    "dependencies": {
+        "surrealdb": "^1.3.2"
+    },
+    "devDependencies": {
+        "@haraka/eslint-config": "^2.0.3",
+        "@prettier/plugin-oxc": "^0.0.4",
+        "haraka-test-fixtures": "^1.3.10",
+        "oxlint": "^1.14.0",
+        "prettier": "3.6.2"
+    }
+}
