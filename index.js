@@ -82,7 +82,7 @@ exports.get_surrealdb_client = async function (opts) {
             await client.close();
         };
 
-        loginfo(`SurrealDB connected to http://${opts.host}:${opts.port}/rpc`);
+        this.loginfo(`SurrealDB connected to http://${opts.host}:${opts.port}/rpc`);
 
         const getAll = async (table) => {
             const connection = await getConnection();

@@ -1,6 +1,6 @@
 {
     "name": "haraka-plugin-surrealdb",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "SurrealDB plugin for Haraka",
     "main": "index.js",
     "type": "commonjs",
