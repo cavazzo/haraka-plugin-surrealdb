@@ -63,11 +63,10 @@ exports.init_surrealdb_shared = async function (next, server) {
 };
 
 exports.get_surrealdb_client = async function (opts) {
-    const client = new Surreal();
-
     try {
         const getConnection = async () => {
-            return await client.connect(`http://${opts.host}:${opts.port}/rpc`, {
+            const client = new Surreal();
+            await client.connect(`http://${opts.host}:${opts.port}/rpc`, {
                 namespace: opts.namespace,
                 database: opts.database,
                 auth: {
@@ -75,6 +74,7 @@ exports.get_surrealdb_client = async function (opts) {
                     password: opts.password
                 }
             });
+            return client;
         };
 
         const closeConnection = async (client) => {
