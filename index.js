@@ -67,7 +67,7 @@ exports.get_surrealdb_client = async function (opts) {
 
     try {
         const getConnection = async () => {
-            return client.connect(`http://${opts.host}:${opts.port}/rpc`, {
+            return await client.connect(`http://${opts.host}:${opts.port}/rpc`, {
                 namespace: opts.namespace,
                 database: opts.database,
                 auth: {
